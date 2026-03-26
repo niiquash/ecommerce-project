@@ -1,7 +1,6 @@
-import React from "react";
+import Header from "../../components/Header";
 import "./CheckoutPage.css";
 import "./checkout-header.css";
-import Header from "../components/Header";
 
 function CheckoutPage() {
   return (
