@@ -1,7 +1,6 @@
 import React from "react";
 import Header from "../../components/Header";
 import "./HomePage.css";
-import "../../components/header.css";
 
 function HomePage() {
   return (
