@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router";
+import { NavLink } from "react-router";
 import "./Header.css";
 
 function Header() {
@@ -7,10 +7,10 @@ function Header() {
     <>
       <div className="header">
         <div className="left-section">
-          <Link to="/" className="header-link">
+          <NavLink to="/" className="header-link">
             <img className="logo" src="images/logo-white.png" />
             <img className="mobile-logo" src="images/mobile-logo-white.png" />
-          </Link>
+          </NavLink>
         </div>
 
         <div className="middle-section">
@@ -22,15 +22,15 @@ function Header() {
         </div>
 
         <div className="right-section">
-          <Link className="orders-link header-link" to="/orders">
+          <NavLink className="orders-link header-link" to="/orders">
             <span className="orders-text">Orders</span>
-          </Link>
+          </NavLink>
 
-          <Link className="cart-link header-link" to="/checkout">
+          <NavLink className="cart-link header-link" to="/checkout">
             <img className="cart-icon" src="images/icons/cart-icon.png" />
             <div className="cart-quantity">3</div>
             <div className="cart-text">Cart</div>
-          </Link>
+          </NavLink>
         </div>
       </div>
     </>
