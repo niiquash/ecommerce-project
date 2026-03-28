@@ -3,6 +3,10 @@ import { products } from "../../../starting-code/data/products.js";
 import "./HomePage.css";
 
 function HomePage() {
+  fetch("http://localhost:3000/products").then((response) =>
+    console.log(response.json()),
+  );
+
   return (
     <>
       <title>Ecommerce Project</title>
