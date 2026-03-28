@@ -3,8 +3,8 @@ import { products } from "../../../starting-code/data/products.js";
 import "./HomePage.css";
 
 function HomePage() {
-  fetch("http://localhost:3000/products").then((response) =>
-    console.log(response.json()),
+  fetch("http://localhost:3000/api/products").then((response) =>
+    response.json().then((data) => console.log(data)),
   );
 
   return (
