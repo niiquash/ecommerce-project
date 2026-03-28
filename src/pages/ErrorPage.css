@@ -1,0 +1,30 @@
+.error-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.error-page .error-code {
+  font-size: 100px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.error-page .error-message {
+  font-size: 18px;
+  line-height: 1.5;
+}
+.error-page .home-link {
+  margin-top: 30px;
+  padding: 10px 20px;
+  background-color: rgb(25, 135, 84);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+.error-page .home-link:hover {
+  background-color: rgb(20, 100, 60);
+}
