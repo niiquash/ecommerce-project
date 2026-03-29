@@ -1,17 +1,27 @@
 import Header from "../../components/Header";
-import { products } from "../../../starting-code/data/products.js";
+import { useEffect, useState } from "react";
+import axios from "axios";
 import "./HomePage.css";
 
 function HomePage() {
-  fetch("http://localhost:3000/api/products").then((response) =>
-    response.json().then((data) => console.log(data)),
-  );
+  const [products, setProducts] = useState([]);
+  const [cartItems, setCartItems] = useState([]);
+
+  useEffect(() => {
+    axios.get("http://localhost:3000/api/products").then((response) => {
+      setProducts(response.data);
+    });
+
+    axios.get("http://localhost:3000/api/cart-items").then((response) => {
+      setCartItems(response.data);
+    });
+  }, []);
 
   return (
     <>
       <title>Ecommerce Project</title>
       <link rel="icon" type="image/svg+xml" href="home-favicon.png" />
-      <Header />
+      <Header cartItems={cartItems} />
 
       <div className="home-page">
         <div className="products-grid">
