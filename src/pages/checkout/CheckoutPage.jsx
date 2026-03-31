@@ -2,12 +2,12 @@ import Header from "../../components/Header";
 import "./CheckoutPage.css";
 import "./checkout-header.css";
 
-function CheckoutPage() {
+function CheckoutPage({ cartItems }) {
   return (
     <>
       <title>Checkout</title>
       <link rel="icon" type="image/svg+xml" href="cart-favicon.png" />
-      <Header />
+      <Header cartItems={cartItems} />
 
       <div className="checkout-page">
         <div className="page-title">Review your order</div>

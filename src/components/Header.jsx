@@ -8,9 +8,9 @@ import CartIcon from "../assets/images/icons/cart-icon.png";
 function Header({ cartItems }) {
   let totalQuantity = 0;
 
-  for (const cartItem of cartItems) {
-    totalQuantity += cartItem.quantity;
-  }
+  cartItems.forEach((item) => {
+    totalQuantity += item.quantity;
+  });
 
   return (
     <>
